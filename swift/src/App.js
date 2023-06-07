@@ -1,6 +1,6 @@
 
 import React from 'react';
-import {BrowserRouter, Switch, Route} from 'react-router-dom'
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import { Home } from './components/Home';
 import { Signup } from './components/Signup';
 import { Login } from './components/Login';
@@ -9,13 +9,14 @@ import { Notfound } from './components/Notfound';
   return (
     <div className="App">
        <BrowserRouter>
-       <Switch>
-        <Route exact path={'/'} component={Home} />
-        <Route exact path={'/Signup'} component={Signup}/>
-        <Route exact path={'/Login'} component={Login}/>
-        <Route component={Notfound}/>
-       </Switch>
+       <Routes>
+        <Route exact path={'/'} element={<Home />} />
+        <Route exact path={'/Signup'} element={<Signup />} />
+        <Route exact path={'/Login'} element={<Login />} />
+        <Route element={<Notfound />}/>
+       </Routes>
        </BrowserRouter>
+       
     </div>
   );
 }

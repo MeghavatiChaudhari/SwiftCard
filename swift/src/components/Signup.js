@@ -1,26 +1,28 @@
 import { useState } from "react";
 import React from "react";
-import { Link } from "react-router-dom";
-
+import { NavLink } from "react-router-dom";
+import { Login } from "./Login";
 export const Signup=()=>{
 
-     const[email ,setEmail] = useState('');
-     const[fullname, setFullname]= useState('');
+     const[email ,setEmail] =useState('');
+     const[fullname, setFullname]=useState('');
      const[password ,setPassword]=useState('');
-     const[errormsg ,setErrormsg] = useState('');
-     const[successmsg ,setSuccessmsg] = useState('');
-
-
-
+     const[errormsg ,setErrormsg] =useState('');
+     const[successmsg ,setSuccessmsg] =useState('');
+     const handleSignup=(e)=>{
+      e.preventDefault();
+      console.log(fullname , email , password);
+     }
 
    return(
     <div className="container">
+    
       <br></br>
       <br></br>
       <h1>Signup</h1>
       <hr></hr>
       <br></br>
-      <form className="form-group" autoComplete="off">
+      <form className="form-group" autoComplete="off" >
         <label>Full Name</label>
         <input type="text" className="form-control" required onChange={(e)=>setFullname(e.target.value)} value={fullname}></input>
         <br></br>
@@ -30,13 +32,13 @@ export const Signup=()=>{
         <br></br>
         <br></br>
         <label>Password</label>
-        <input type="password" className="form-control" required></input>
+        <input type="password" className="form-control" required onChange={(e)=>setPassword(e.target.value)} value={password}></input>
         <br></br>
          <div className="btn-box">
           <span>Already have an account Login</span>
-          <Link to={'Login'} className="link">Here</Link>
+          <NavLink to={'/Login'} className="link">Here</NavLink>
           <br></br>
-          <button type="submit" className="btn btn-success btn-md"> Login</button>
+          <button type="submit" className="btn btn-success btn-md"> Signup</button>
          </div>
       </form>
     </div>
