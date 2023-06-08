@@ -25,7 +25,7 @@ export const Home=()=>{
         width: "100%",
         repeat:-1,
         yoyo:true,
-        duration:2,
+        duration:1,
         stagger:2
     })
     return(

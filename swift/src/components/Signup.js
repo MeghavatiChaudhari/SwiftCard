@@ -19,26 +19,26 @@ export const Signup=()=>{
     
       <br></br>
       <br></br>
-      <h1>Signup</h1>
+      {/* <h1>Signup</h1> */}
       <hr></hr>
       <br></br>
       <form className="form-group" autoComplete="off" >
-        <label>Full Name</label>
+        <label className="label">Full Name</label>
         <input type="text" className="form-control" required onChange={(e)=>setFullname(e.target.value)} value={fullname}></input>
         <br></br>
         <br></br>
-        <label>Email</label>
+        <label className="label">Email</label>
         <input type="email" className="form-control" required onChange={(e)=>setEmail(e.target.value)} value={email}></input>
         <br></br>
         <br></br>
-        <label>Password</label>
+        <label className="label">Password</label>
         <input type="password" className="form-control" required onChange={(e)=>setPassword(e.target.value)} value={password}></input>
         <br></br>
          <div className="btn-box">
           <span>Already have an account Login</span>
           <NavLink to={'/Login'} className="link">Here</NavLink>
           <br></br>
-          <button type="submit" className="btn btn-success btn-md"> Signup</button>
+          <button type="submit" className="button1"> Signup</button>
          </div>
       </form>
     </div>

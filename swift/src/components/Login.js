@@ -19,22 +19,22 @@ export const Login=()=>{
         
       <br></br>
       <br></br>
-      <h1>Login</h1>
+      {/* <h1>Login</h1> */}
       <hr></hr>
       <br></br>
       <form className="form-group" autoComplete="off" onSubmit={handleLogin}>
-        <label>Email</label>
+        <label className="label">Email</label>
         <input type="email" className="form-control" required onChange={(e)=>setEmail(e.target.value)} value={email}></input>
         <br></br>
         <br></br>
-        <label>Password</label>
-        <input type="password" className="form-control" required onChange={(e)=>setPassword(e.target.value)} value={password}></input>
+        <label className="label">Password</label>
+        <input  type="password" className="form-control" required onChange={(e)=>setPassword(e.target.value)} value={password}></input>
         <br></br>
          <div className="btn-box">
-          <span>Don't have an account Signup</span>
+          <span style={{fontFamily: "font-family:Montserrat , sans-serif"}}>Don't have an account Signup</span>
           <NavLink to={'/Signup'} className="link">Here</NavLink>
           <br></br>
-          <button type="submit" className="btn btn-success btn-md"> Login</button>
+          <button type="submit" className="button1"> Login</button>
          </div>
       </form>
       {/* <Signup /> */}
