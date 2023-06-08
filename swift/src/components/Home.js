@@ -3,7 +3,7 @@ import { Navbar } from "./Navbar";
 import { Products } from "./Products";
 import gsap from 'gsap';
 import { Expo } from 'gsap';
-
+;
 export const Home=()=>{
     // var Expo = gsap.Expo;
 
@@ -12,14 +12,14 @@ export const Home=()=>{
     //      ease: Expo.easeInOut,
     //     duration:2
     // })
-    // if (typeof gsap !== 'undefined') {
-    //   // GSAP is installed and available
-    //   console.log("GSAP is installed.");
-    // } else {
-    //   // GSAP is not installed or not available
-    //   console.log("GSAP is not installed.");
-    // }
-    
+    if (typeof gsap !== 'undefined') {
+      // GSAP is installed and available
+      console.log("GSAP is installed.");
+    } else {
+      // GSAP is not installed or not available
+      console.log("GSAP is not installed.");
+    }
+  
     gsap.to(".imagecontainer",{
         ease:Expo.easeInOut,
         width: "100%",
@@ -31,8 +31,8 @@ export const Home=()=>{
     return(
         <div>
          <Navbar/>
-        <Products/> 
-       
+        {/* <Products/>  */}
+    
         
      <div id="main">
       <div id="center">

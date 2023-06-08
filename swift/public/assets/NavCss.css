@@ -1,0 +1,20 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+ .navigate{
+     /* margin-top: 5px; */
+     height: 40px;  
+     background-color: #24242A;
+
+} 
+ #nav1{
+    font-family:Montserrat , sans-serif;
+    margin-left: 1200px;   
+    color: aliceblue;
+}
+#nav2{
+    font-family:Montserrat , sans-serif;
+    margin-left: 20px;
+    
+}
+ 
