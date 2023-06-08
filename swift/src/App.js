@@ -5,6 +5,7 @@ import { Home } from './components/Home';
 import { Signup } from './components/Signup';
 import { Login } from './components/Login';
 import { Notfound } from './components/Notfound';
+
  function App() {
   return (
     <div className="App">
