@@ -3,7 +3,6 @@ import { Navbar } from "./Navbar";
 import { Products } from "./Products";
 import gsap from 'gsap';
 import { Expo } from 'gsap';
-;
 export const Home=()=>{
     // var Expo = gsap.Expo;
 

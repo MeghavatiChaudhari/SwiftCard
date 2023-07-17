@@ -6,12 +6,12 @@
 }
 .container{
  height: 100vh;
- background-color:black;
- color: aliceblue;
+ background-color: #F2F2F2;;
+ color: #333333;;
 }
 
 .label{
-    color: antiquewhite;
+    color: black;
    font-size: large;
     padding: 3px;
     margin: 5px;
