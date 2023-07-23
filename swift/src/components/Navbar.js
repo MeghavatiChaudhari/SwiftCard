@@ -3,7 +3,18 @@ import { NavLink } from "react-router-dom";
 import { Signup } from "./Signup";
 import { Login } from "./Login";
 import logo from '../Images/logo.png';
-export const Navbar=()=>{
+import { auth,db } from "../config/config";
+import { useNavigate } from 'react-router-dom';
+export const Navbar=({user})=>{
+    const navigate = useNavigate(); 
+
+    const handleLogout=()=>{
+        auth.signOut().then(()=>{
+            // history.push('/login');
+            navigate('/login'); 
+        })
+    }
+
     return(
       
         <div className="navbar">
@@ -14,12 +25,31 @@ export const Navbar=()=>{
             </div>
         </div>
         <div className="navigate">
-        <span id="nav1">  
-         <NavLink to={"/Signup"} style={{color:"black"} }> SIGN UP </NavLink>
-        </span>
-        <span id="nav2">
-         <NavLink to={"/Login"} style={{color:"black"}}> LOGIN</NavLink>
-         </span>
+            {!user&&<>
+              <span id="nav1">  
+              <NavLink to={"/Signup"} style={{color:"black"} }> SIGN UP </NavLink>
+              </span>
+              <span id="nav2">
+              <NavLink to={"/Login"} style={{color:"black"}}> LOGIN</NavLink>
+              </span>
+            </>}
+
+            {user&&<>
+                <div><NavLink className='navlink' to="/">{user}</NavLink></div>
+                    <div className='cart-menu-btn'>
+                        <NavLink className='navlink' to="/cart">
+                            {/* <Icon icon={shoppingCart} size={20}/> */}
+                        </NavLink>
+                        {/* <span className='cart-indicator'>{totalQty}</span> */}
+                    </div>
+                    <div className='btn btn-danger btn-md'
+                    onClick={handleLogout}>LOGOUT</div>
+            </>}
+
+
+
+
+
         </div>
 
       </div>

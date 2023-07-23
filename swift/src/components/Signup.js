@@ -2,7 +2,7 @@ import { useState } from "react";
 import React from "react";
 import { NavLink, Navigate } from "react-router-dom";
 import { Login } from "./Login";
-import { auth,fs } from "../config/config";
+import { auth,db } from "../config/config";
 import { useNavigate } from 'react-router-dom';
 import { createUserWithEmailAndPassword } from "firebase/auth";
 
@@ -29,7 +29,7 @@ import { collection, doc, setDoc } from "firebase/firestore"; // Import necessar
             Email: email,
             password: password,
           };
-          setDoc(doc(fs, "users", credentials.user.uid), userDoc)({
+          setDoc(doc(db, "users", credentials.user.uid), userDoc)({
           // setDoc(doc(fs, "users", credentials.user.uid), {
           FullName:fullname,
           Email:email,
