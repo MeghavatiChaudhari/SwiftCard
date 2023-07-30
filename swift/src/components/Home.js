@@ -52,9 +52,16 @@ export const Home = (props) => {
    useEffect(()=>{
     getProducts();
    },[])
+   let Product;
    const addToCart=(Products)=>{
     if(uid !== null){
-      console.log(Products);
+      // console.log(Products);
+       Product=Products;
+       Product['qty']=1;
+       Product['TotalProductPrice']=Product.qty*Product.price;
+       db.collection('cart'+uid).doc(Products.ID).set(Product).then(()=>{
+        console.log('successfully added to cart');
+       })
     }else{
       // props.histroy.push('/login');
       navigate('/login'); 
