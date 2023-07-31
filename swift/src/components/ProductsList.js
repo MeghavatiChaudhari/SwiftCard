@@ -1,36 +1,40 @@
+// import React from "react";
+// import { IndividualProduct } from "./IndividualProduct";
 
-// import React from 'react';
-// import IndividualProduct from "./IndividualProduct";
-
-// const ProductsList = ({ Products }) => {
+// export const ProductsList = ({ Products, addToCart }) => {
 //   return (
-//     <div className="products-box">
+//     <div className="products-list">
 //       {Products.map((product) => (
-//         <div className="product-container" key={product.ID}>
-//           <IndividualProduct IndividualProduct={product} />
-//         </div>
+//         <IndividualProduct
+//           key={product.ID} // Add the key prop with a unique value (in this case, the product's ID)
+//           product={product}
+//           addToCart={addToCart}
+//         />
 //       ))}
 //     </div>
 //   );
-// }
+// };
+// ProductsList.js
+import React from "react";
+import { IndividualProduct } from "./IndividualProduct";
 
-// export default ProductsList;
-
-import React from 'react';
-import IndividualProduct from './IndividualProduct';
-
-const ProductsList = ({ Products , addToCart}) => {
+export const ProductsList = ({ Products, addToCart, userId }) => {
   return (
-    <div className="products-box">
+    <div className="products-list">
       {Products.map((product) => (
-        <div className="product-container" key={product.ID}>
-          <IndividualProduct product={product} addToCart={addToCart} /> {/* Corrected prop name: product */}
-        </div>
+        <IndividualProduct
+          key={product.ID}
+          product={product}
+          addToCart={() => addToCart(userId, product)} // Pass both userId and product to addToCart
+        />
       ))}
     </div>
   );
-}
+};
 
-export default ProductsList;
+
+
+
+
 
 

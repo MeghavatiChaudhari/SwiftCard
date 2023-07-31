@@ -5,6 +5,8 @@ import { Login } from "./Login";
 import logo from '../Images/logo.png';
 import { auth,db } from "../config/config";
 import { useNavigate } from 'react-router-dom';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import { Icon } from "@mui/material";
 export const Navbar=({user})=>{
     const navigate = useNavigate(); 
 
@@ -38,17 +40,14 @@ export const Navbar=({user})=>{
                 <div><NavLink className='navlink' to="/">{user}</NavLink></div>
                     <div className='cart-menu-btn'>
                         <NavLink className='navlink' to="/cart">
-                            {/* <Icon icon={shoppingCart} size={20}/> */}
+                         {/* <Icon icon={ShoppingCartIcon}></Icon> */}
+                         <Icon component={ShoppingCartIcon} />
+                         
                         </NavLink>
-                        {/* <span className='cart-indicator'>{totalQty}</span> */}
                     </div>
                     <div className='btn btn-danger btn-md'
                     onClick={handleLogout}>LOGOUT</div>
             </>}
-
-
-
-
 
         </div>
 
