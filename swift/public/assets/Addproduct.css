@@ -1,0 +1,88 @@
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+/* Styling for the file input */
+/* #file {
+  display: none; 
+} */
+#file{
+  margin-left: 45px;
+  margin-top: 30px;
+}
+/* Custom style for the file input container */
+ .upload-btn-wrapper {
+  position: relative;
+  /* overflow: hidden; */
+}
+
+/* Custom style for the file input button */
+.upload-btn-wrapper .btn {
+  border: 2px solid #ccc;
+  color: #333;
+  background-color: #fff;
+  padding: 8px 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 40px;
+  background-color: #fff;
+}
+
+/* Styling for the custom file input */
+/* .upload-btn-wrapper input[type="file"] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  cursor: pointer;
+  width: 100%; 
+  height: 100%; 
+} */
+
+/* Style the submit button */
+button[type="submit"] {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Optional: Add some spacing between form elements */
+br {
+  line-height: 5px;
+}

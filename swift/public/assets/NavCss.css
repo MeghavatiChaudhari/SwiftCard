@@ -1,0 +1,49 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+/* Navbar container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 10px;
+  }
+  
+  /* Logo */
+  .logo img {
+    height: 50px; /* Adjust the height as needed */
+  }
+  
+  /* Navigation links */
+  .navigate {
+    display: flex;
+    gap: 20px;
+  }
+  
+  /* Individual navigation links */
+  .navigate a {
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+  }
+  
+  /* Active link style */
+  .navigate a.active {
+    background-color: #ccc;
+  }
+  
+  /* Hover effect for navigation links */
+  .navigate a:hover {
+    background-color: #ddd;
+  }
+  
+
+
+
+
+
+
+
+
+
